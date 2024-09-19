@@ -19,7 +19,7 @@ test: clean_test
 	$(VALGRIND) ./test
 
 clean: clean_report clean_test
-	rm -rf bin/s21_string.a *.o
+	rm -rf lib/s21_string.a *.o
 
 clean_test:
 	rm -rf test
