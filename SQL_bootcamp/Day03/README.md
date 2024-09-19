@@ -4,47 +4,8 @@
 
 Resume: Today you will see how to change data based on DML language.
 
-## Contents
-
-1. [Chapter I](#chapter-i) \
-    1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-    2.1. [General Rules](#general-rules)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Rules of the day](#rules-of-the-day)  
-4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 - Let’s find appropriate prices for Kate](#exercise-00-lets-find-appropriate-prices-for-kate)  
-5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 - Let’s find forgotten menus](#exercise-01-lets-find-forgotten-menus)  
-6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 - Let’s find forgotten pizza and pizzerias](#exercise-02-lets-find-forgotten-pizza-and-pizzerias)  
-7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 - Let’s compare visits](#exercise-03-lets-compare-visits)  
-8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 - Let’s compare orders](#exercise-04-lets-compare-orders)
-9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 - Visited but did not make any order](#exercise-05-visited-but-did-not-make-any-order)
-10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 - Find price-similarity pizzas](#exercise-06-find-price-similarity-pizzas)
-11. [Chapter XI](#chapter-xi) \
-    11.1. [Exercise 07 - Let’s cook a new type of pizza](#exercise-07-lets-cook-a-new-type-of-pizza)
-12. [Chapter XII](#chapter-xii) \
-    12.1. [Exercise 08 - Let’s cook a new type of pizza with more dynamics](#exercise-08-lets-cook-a-new-type-of-pizza-with-more-dynamics)
-13. [Chapter XIII](#chapter-xiii) \
-    13.1. [Exercise 09 - New pizza means new visits](#exercise-09-new-pizza-means-new-visits)
-14. [Chapter XIV](#chapter-xiv) \
-    14.1. [Exercise 10 - New visits means new orders](#exercise-10-new-visits-means-new-orders)
-15. [Chapter XV](#chapter-xv) \
-    15.1. [Exercise 11 - “Improve” a price for clients](#exercise-11-improve-a-price-for-clients)    
-16. [Chapter XVI](#chapter-xvi) \
-    16.1. [Exercise 12 - New orders are coming!](#exercise-12-new-orders-are-coming)
-17. [Chapter XVII](#chapter-xvii) \
-    17.1. [Exercise 13 - Money back to our customers](#exercise-13-money-back-to-our-customers)
-
 ## Chapter I
 ## Preamble
-
-![D03_01](misc/images/D03_01.png)
 
 Relation Theory is a mathematical foundation for modern Relational Databases. EEvery aspect of databases has a corresponding mathematical and logical justification. Including INSERT / UPDATE / DELETE operators. (Dr. Edgar Frank Codd is in the picture).
 
@@ -71,10 +32,7 @@ What’s about the DELETE statement?
 
 The last case with UPDATE statement is really interesting, because in other words you add a new tuple and after that make a MINUS of the old row. Same behavior in the physical implementation! Actually, `UPDATE = DELETE + INSERT` and there is a special term "Tombstone" status for a particular deleted/updated row. Then if you have a lot of Tombstones then you have a bad TPS metric and you need to control your dead data!
 
-![D03_02](misc/images/D03_02.png)
-
 Let’s make a cheese of our data! :-)
-
 
 ## Chapter II
 ## General Rules
@@ -95,12 +53,8 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 ## Rules of the day
 
 - Please make sure you have your own database and access for it on your PostgreSQL cluster. 
-- Please download a [script](materials/model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). 
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at this section before you start.
 - Please take a look at the Logical View of our Database Model. 
-
-![schema](misc/images/schema.png)
-
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
 - field id - primary key
