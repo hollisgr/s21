@@ -4,8 +4,42 @@
 
 Resume: Today you will see how to get needed data based on sets constructions and simple JOINs.
 
+## Contents
+
+1. [Chapter I](#chapter-i) \
+    1.1. [Preamble](#preamble)
+2. [Chapter II](#chapter-ii) \
+    2.1. [General Rules](#general-rules)
+3. [Chapter III](#chapter-iii) \
+    3.1. [Rules of the day](#rules-of-the-day)  
+4. [Chapter IV](#chapter-iv) \
+    4.1. [Exercise 00 - Let’s make UNION dance](#exercise-00-lets-make-union-dance)  
+5. [Chapter V](#chapter-v) \
+    5.1. [Exercise 01 - UNION dance with subquery](#exercise-01-union-dance-with-subquery)  
+6. [Chapter VI](#chapter-vi) \
+    6.1. [Exercise 02 - Duplicates or not duplicates](#exercise-02-duplicates-or-not-duplicates)  
+7. [Chapter VII](#chapter-vii) \
+    7.1. [Exercise 03 - “Hidden” Insights](#exercise-03-hidden-insights)  
+8. [Chapter VIII](#chapter-viii) \
+    8.1. [Exercise 04 - Difference? Yep, let's find the difference between multisets](#exercise-04-difference-yep-lets-find-the-difference-between-multisets)
+9. [Chapter IX](#chapter-ix) \
+    9.1. [Exercise 05 - Did you hear about Cartesian Product?](#exercise-05-did-you-hear-about-cartesian-product)
+10. [Chapter X](#chapter-x) \
+    10.1. [Exercise 06 - Lets see on “Hidden” Insights](#exercise-06-lets-see-on-hidden-insights)
+11. [Chapter XI](#chapter-xi) \
+    11.1. [Exercise 07 - Just make a JOIN](#exercise-07-just-make-a-join)
+12. [Chapter XII](#chapter-xii) \
+    12.1. [Exercise 08 - Migrate JOIN to NATURAL JOIN](#exercise-08-migrate-join-to-natural-join)
+13. [Chapter XIII](#chapter-xiii) \
+    13.1. [Exercise 09 - IN versus EXISTS](#exercise-09-in-versus-exists)
+14. [Chapter XIV](#chapter-xiv) \
+    14.1. [Exercise 10 - Global JOIN](#exercise-10-global-join)
+
+
 ## Chapter I
 ## Preamble
+
+![D01_01](misc/images/D01_01.png)
 
 In many aspects, sets are used in Relational Databases. Not only to do UNION or MINUS between sets. Sets are also good candidates for doing recursive queries.
 
@@ -18,6 +52,8 @@ The keyword "ALL" means to store duplicate rows in the result.
 The main rules for working with sets are as follows:
 - Main SQL provides final names of attributes for the whole query.
 - The attributes of controlled SQL should match the number of columns and corresponding family types of main SQL.
+
+![D01_02](misc/images/D01_02.png)
 
 In addition, SQL sets are useful for calculating some specific data science metrics, such as the Jaccard distance between 2 objects based on existing data features.
 
@@ -40,8 +76,12 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 ## Rules of the day
 
 - Please make sure you have your own database and access to it on your PostgreSQL cluster. 
+- Please download a [script](materials/model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). 
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at the section before you start.
 - Please take a look at the Logical View of our Database Model. 
+
+![schema](misc/images/schema.png)
+
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
 - field id - primary key
