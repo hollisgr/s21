@@ -4,7 +4,7 @@ Implementation of the matrix_cpp library.
 
 ## Introduction
 
-In this project, i implement the matrix library that i already know from the **matrix** project, but this time i used the object-oriented approach. The object-oriented approach allows to implement a library for matrices as a separate class whose objects have defined operations, that is represented both as methods and as standard operators +, -, *, etc.
+This project is implemented the matrix library from my **matrix** project, but this time used the object-oriented approach. The object-oriented approach allows to implement a library for matrices as a separate class whose objects have defined operations, that is represented both as methods and as standard operators +, -, *, etc.
 
 ## Information
 
