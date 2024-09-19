@@ -4,44 +4,14 @@
 
 Resume: Today you will see how to add a new business feature into our data model.
 
-## Contents
-
-1. [Chapter I](#chapter-i) \
-    1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-    2.1. [General Rules](#general-rules)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Rules of the day](#rules-of-the-day)  
-4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 - Discounts, discounts , everyone loves discounts](#exercise-00-discounts-discounts-everyone-loves-discounts)  
-5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 - Let’s set personal discounts](#exercise-01-lets-set-personal-discounts)  
-6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 - Let’s recalculate a history of orders.](#exercise-02-lets-recalculate-a-history-of-orders)  
-7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 - Improvements are in a way](#exercise-03-improvements-are-in-a-way)  
-8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 - We need more Data Consistency](#exercise-04-we-need-more-data-consistency)
-9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 - Data Governance Rules](#exercise-05-data-governance-rules)
-10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 - Let’s automate Primary Key generation](#exercise-06-lets-automate-primary-key-generation)
-
 ## Chapter I
 ## Preamble
-
-![D06_01](misc/images/D06_01.png)
 
 Why is a diamond one of the most durable objects? The reason lies in its structure. Each atom knows its place in the topology of the diamond and makes the whole diamond unbreakable. 
 
 A logical structure is like a diamond. If you find a suitable structure for your own Database Model, you will find gold (or diamond :-). There are two aspects to Database Modeling. The first is a logical view, in other words, how your model will smoothly describe the real business world.
 
-![D06_02](misc/images/D06_02.png)
-
 On the other hand, your model should solve your functional tasks with minimal impact. This means transforming the logical model view into the physical model view, and not just from table and attribute descriptions. But actually, from performance and budget perspectives, which are more important today. How to find a balance? For this case, there are 3 steps to create a very good design. Just take a look at the image below.
-
-![D06_03](misc/images/D06_03.png)
-
 
 ## Chapter II
 ## General Rules
@@ -62,12 +32,8 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 ## Rules of the day
 
 - Please make sure you have your own database and access to it on your PostgreSQL cluster. 
-- Please download a [script](materials/model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). **Our knowledge way is incremental and linear therefore please be aware that all changes you made in Day03 during Exercises 07-13 and in Day04 during Exercise 07 should be on place (its similar like in real world when we applied a release and need to be consistent with data for new changes).**
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please review this section before starting.
 - Please take a look at the Logical View of our Database Model. 
-
-![schema](misc/images/schema.png)
-
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
 - field id - primary key
