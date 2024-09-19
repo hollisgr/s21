@@ -51,9 +51,9 @@ A square matrix (A) is a matrix with the number of rows equal to the number of c
 
 ## Matrix operations
 
-Below is a brief description of the matrix operations that need to be implemented in the development library.
-They are similar to the operations you performed earlier in "Structured Programming", so you can see a more detailed description of them there.
-Note that some operations have exceptional situations that require special handling using the exception mechanism.
+Below is a brief description of the matrix operations is implemented in the development library.
+They are similar to the operations that i performed earlier in "matrix".
+Some operations have exceptional situations that require special handling using the exception mechanism.
 
 | Operation | Description | Exceptional situations |
 | ----------- | ----------- | ----------- |
