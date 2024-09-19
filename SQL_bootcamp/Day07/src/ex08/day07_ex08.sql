@@ -1,0 +1,10 @@
+select
+    p.address,
+    pz.name,
+    count(*) as count_of_orders
+    from person_order po
+    join person p on p.id = po.person_id
+    join menu m on m.id = po.menu_id
+    join pizzeria pz on pz.id =  m.pizzeria_id
+    group by pz.name, p.address
+    order by 1, 2;
