@@ -1,10 +1,12 @@
-# matrix  
+# Matrix  
 
 Implementation of the matrix.h library.   
 
 ## Introduction
 
 This project is implementation library for processing numerical matrices in the C programming language. Matrices are one of the basic data structures in programming, e.g. they are used to represent table values, for computational tasks and neural networks. As part of the project i learned more about matrices and solidify knowledge of structured programming.
+
+- Author: hollisgr
 
 ### Matrix structure is:
 
@@ -230,7 +232,7 @@ The transpose of matrix of algebraic complements:
        -27  29 -24
 ```
 
-The inverse matrix will look like this:
+The inverse matrix look like this:
 
 ```
                            1  -1   1
