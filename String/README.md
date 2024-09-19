@@ -96,7 +96,7 @@ where:
 | 4 | void *trim(const char *src, const char *trim_chars) | Returns a new string in which all leading and trailing occurrences of a set of specified characters (trim_chars) from the given string (src) are removed. In case of any error, return NULL. |
 
 
-## Implementation of the string.h library functions
+## Information
 
  - The library is developed in C language of C11 standard using gcc compiler;
  - Created static library named *s21_string.a* (with the header file s21_string.h);
