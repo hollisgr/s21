@@ -4,39 +4,8 @@
 
 Resume: Today you will see how to use specific OLAP constructions to get a "Value" from data.
 
-## Contents
-
-1. [Chapter I](#chapter-i) \
-    1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-    2.1. [General Rules](#general-rules)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Rules of the day](#rules-of-the-day)  
-4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 - Simple aggregated information](#exercise-00-simple-aggregated-information)  
-5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 - Let’s see real names](#exercise-01-lets-see-real-names)  
-6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 - Restaurants statistics](#exercise-02-restaurants-statistics)  
-7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 - Restaurants statistics #2](#exercise-03-restaurants-statistics-2)  
-8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 - Clause for groups](#exercise-04-clause-for-groups)
-9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 - Person's uniqueness](#exercise-05-persons-uniqueness)
-10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 - Restaurant metrics](#exercise-06-restaurant-metrics)
-11. [Chapter XI](#chapter-xi) \
-    11.1. [Exercise 07 - Average global rating](#exercise-07-average-global-rating)
-12. [Chapter XII](#chapter-xii) \
-    12.1. [Exercise 08 - Find pizzeria’s restaurant locations](#exercise-08-find-pizzerias-restaurant-locations)    
-13. [Chapter XIII](#chapter-xiii) \
-    13.1. [Exercise 09 - Explicit type transformation](#exercise-09-explicit-type-transformation)        
-
 ## Chapter I
 ## Preamble
-
-![D07_01](misc/images/D07_01.png)
 
 For detailed data over time, see the Curve of Usefulness. In other words, detailed data (i.e. user transactions, facts about products and providers, etc.) is not useful to us from a historical perspective, because we only need to know some aggregation to describe what was going on a year ago.
 
@@ -45,10 +14,6 @@ Why is this happening? The reason lies in our analytical mind. Actually, we want
 From a database point of view, "Analytical mind" corresponds to OLAP traffic (information layer), "details" corresponds to OLTP traffic (raw data layer). Today, there is a more flexible pattern for storing detailed data and aggregated information in the ecosystem. I am talking about `LakeHouse = DataLake + DataWareHouse`.
 
 If we are talking about historical data, then we should mention the "Data Lifecycle Management" pattern. In simple words, what should we do with old data? TTL (time-to-live), SLA for data, Retention Data Policy, etc. are terms used in Data Governance strategy.
-
-![D07_02](misc/images/D07_02.png)
-
-
 
 ## Chapter II
 ## General Rules
@@ -69,12 +34,8 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 ## Rules of the day
 
 - Please make sure you have your own database and access to it on your PostgreSQL cluster. 
-- Please download a [script](materials/model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). **Our knowledge way is incremental and linear therefore please be aware all changes that you made in Day03 during Exercises 07-13 and in Day04 during Exercise 07 should be on place (its similar like in real world , when we applied a release and need to be consistency with data for new changes).**
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at the section before you start.
 - Please take a look at the Logical View of our Database Model. 
-
-![schema](misc/images/schema.png)
-
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
 - field id - primary key
