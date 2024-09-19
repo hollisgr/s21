@@ -4,8 +4,42 @@
 
 Resume: Today you will see how to get needed data based on different structures JOINs.
 
+## Contents
+
+1. [Chapter I](#chapter-i) \
+    1.1. [Preamble](#preamble)
+2. [Chapter II](#chapter-ii) \
+    2.1. [General Rules](#general-rules)
+3. [Chapter III](#chapter-iii) \
+    3.1. [Rules of the day](#rules-of-the-day)  
+4. [Chapter IV](#chapter-iv) \
+    4.1. [Exercise 00 - Move to the LEFT, move to the RIGHT](#exercise-00-move-to-the-left-move-to-the-right)  
+5. [Chapter V](#chapter-v) \
+    5.1. [Exercise 01 - Find data gaps](#exercise-01-find-data-gaps)  
+6. [Chapter VI](#chapter-vi) \
+    6.1. [Exercise 02 - FULL means ‘completely filled’](#exercise-02-full-means-completely-filled)  
+7. [Chapter VII](#chapter-vii) \
+    7.1. [Exercise 03 - Reformat to CTE](#exercise-03-reformat-to-cte)  
+8. [Chapter VIII](#chapter-viii) \
+    8.1. [Exercise 04 - Find favourite pizzas](#exercise-04-find-favourite-pizzas)
+9. [Chapter IX](#chapter-ix) \
+    9.1. [Exercise 05 - Investigate Person Data](#exercise-05-investigate-person-data)
+10. [Chapter X](#chapter-x) \
+    10.1. [Exercise 06 - favourite pizzas for Denis and Anna](#exercise-06-favourite-pizzas-for-denis-and-anna)
+11. [Chapter XI](#chapter-xi) \
+    11.1. [Exercise 07 - Cheapest pizzeria for Dmitriy](#exercise-07-cheapest-pizzeria-for-dmitriy)
+12. [Chapter XII](#chapter-xii) \
+    12.1. [Exercise 08 - Continuing to research data](#exercise-08-continuing-to-research-data)
+13. [Chapter XIII](#chapter-xiii) \
+    13.1. [Exercise 09 - Who loves cheese and pepperoni?](#exercise-09-who-loves-cheese-and-pepperoni)
+14. [Chapter XIV](#chapter-xiv) \
+    14.1. [Exercise 10 - Find persons from one city](#exercise-10-find-persons-from-one-city)
+
+
 ## Chapter I
 ## Preamble
+
+![D02_01](misc/images/D02_01.png)
 
 The image shows a Relational Expression in Tree View. This expression corresponds to the following SQL query:
 
@@ -35,6 +69,9 @@ But what is a join operation between 2 tables? Let me present a part of pseudo c
 
 It’s just a set of loops ... Not magic at all
 
+
+
+
 ## Chapter II
 ## General Rules
 
@@ -54,8 +91,12 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
+- Please download a [script](materials/model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). 
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at that section before you start.
 - Please take a look at the Logical View of our Database Model. 
+
+![schema](misc/images/schema.png)
+
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
 - field id - primary key

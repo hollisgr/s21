@@ -4,8 +4,37 @@
 
 Resume: Today you will see how to use a virtual view and physical snapshot of data.
 
+## Contents
+
+1. [Chapter I](#chapter-i) \
+    1.1. [Preamble](#preamble)
+2. [Chapter II](#chapter-ii) \
+    2.1. [General Rules](#general-rules)
+3. [Chapter III](#chapter-iii) \
+    3.1. [Rules of the day](#rules-of-the-day)  
+4. [Chapter IV](#chapter-iv) \
+    4.1. [Exercise 00 - Let’s create separated views for persons](#exercise-00-lets-create-separated-views-for-persons)  
+5. [Chapter V](#chapter-v) \
+    5.1. [Exercise 01 - From parts to common view](#exercise-01-from-parts-to-common-view)  
+6. [Chapter VI](#chapter-vi) \
+    6.1. [Exercise 02 - “Store” generated dates in one place](#exercise-02-store-generated-dates-in-one-place)  
+7. [Chapter VII](#chapter-vii) \
+    7.1. [Exercise 03 - Find missing visit days with Database View](#exercise-03-find-missing-visit-days-with-database-view)  
+8. [Chapter VIII](#chapter-viii) \
+    8.1. [Exercise 04 - Let’s find something from Set Theory](#exercise-04-lets-find-something-from-set-theory)
+9. [Chapter IX](#chapter-ix) \
+    9.1. [Exercise 05 - Let’s calculate a discount price for each person](#exercise-05-lets-calculate-a-discount-price-for-each-person)
+10. [Chapter X](#chapter-x) \
+    10.1. [Exercise 06 - Materialization from virtualization](#exercise-06-materialization-from-virtualization)
+11. [Chapter XI](#chapter-xi) \
+    11.1. [Exercise 07 - Refresh our state](#exercise-07-refresh-our-state)
+12. [Chapter XII](#chapter-xii) \
+    12.1. [Exercise 08 - Just clear our database](#exercise-08-just-clear-our-database)
+
 ## Chapter I
 ## Preamble
+
+![D04_02](misc/images/D04_02.png)
 
 Why do we need virtual tables and materialized views in databases? Databases are just tables, aren't they? 
 No, not really. Databases are similar to object-oriented languages. Just remember, you have a lot of abstraction in Java (we mean Java interfaces). We need abstraction to achieve "clean architecture" and change objects with minimal impact on dependencies (sometimes it works :-).
@@ -19,11 +48,17 @@ This pattern divides objects into three levels:
 Therefore, we can say that Virtual Tables and Materialized Views are physical interfaces between tables with data and user/application.
 So, what is the difference between 2 objects? The main difference is the "freshness" of the data. Below you can see the behavior of these objects in graphical representation.
 
+|  |  |
+| ------ | ------ |
+| View is a continuous object with the same data like in the underlying table(s), that are used to create this view. Other words, if we select data from view, view reroutes our query to underlying objects and then returns results for us. | ![D04_03](misc/images/D04_03.png) |
+| ![D04_04](misc/images/D04_04.png) | Materialized View is a discrete object. Other words, we need to wait when the Materialized View will be refreshed based on an “event trigger” (for example, time schedule). This object always is behind actual data in underlying tables. |
+
 There are also "a few" additional differences between View and Materialized View.
 - Virtual Table can work with `INSERT/UPDATE/DELETE` traffic, but with some restrictions. 
 - Virtual Tables can have “Instead Of” Triggers to make a better control of incoming `INSERT/UPDATE/DELETE` traffic.
 - Materialized View is ReadOnly object for `INSERT/UPDATE/DELETE` traffic.
 - Materialized Views can have user defined indexes on columns to speed up queries.
+
 
 ## Chapter II
 ## General Rules
@@ -44,8 +79,12 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 ## Rules of the day
 
 - Please make sure you have your own database and access for it on your PostgreSQL cluster. 
+- Please download a [script](materials/model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). **Our knowledge way is incremental and linear therefore please be aware all changes that you made in Day03 during exercises 07-13 should be on place (its similar like in real world , when we applied a release and need to be consistency with data for new changes).**
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at this section before you start.
 - Please take a look at the Logical View of our Database Model. 
+
+![schema](misc/images/schema.png)
+
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
 - field id - primary key

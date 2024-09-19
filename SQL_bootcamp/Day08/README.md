@@ -3,9 +3,37 @@
 ## _Isolation is one of ACID properties_
 
 Resume: Today you will see how database works with transactions and isolation levels.
- 
+
+## Contents
+
+1. [Chapter I](#chapter-i) \
+    1.1. [Preamble](#preamble)
+2. [Chapter II](#chapter-ii) \
+    2.1. [General Rules](#general-rules)
+3. [Chapter III](#chapter-iii) \
+    3.1. [Rules of the day](#rules-of-the-day)  
+4. [Chapter IV](#chapter-iv) \
+    4.1. [Exercise 00 - Simple transaction](#exercise-00-simple-transaction)  
+5. [Chapter V](#chapter-v) \
+    5.1. [Exercise 01 - Lost Update Anomaly](#exercise-01-lost-update-anomaly)  
+6. [Chapter VI](#chapter-vi) \
+    6.1. [Exercise 02 - Lost Update for Repeatable Read](#exercise-02-lost-update-for-repeatable-read)  
+7. [Chapter VII](#chapter-vii) \
+    7.1. [Exercise 03 - Non-Repeatable Reads Anomaly](#exercise-03-non-repeatable-reads-anomaly)  
+8. [Chapter VIII](#chapter-viii) \
+    8.1. [Exercise 04 - Non-Repeatable Reads for Serialization](#exercise-04-non-repeatable-reads-for-serialization)
+9. [Chapter IX](#chapter-ix) \
+    9.1. [Exercise 05 - Phantom Reads Anomaly](#exercise-05-phantom-reads-anomaly)
+10. [Chapter X](#chapter-x) \
+    10.1. [Exercise 06 - Phantom Reads for Repeatable Read](#exercise-06-phantom-reads-for-repeatable-read)
+11. [Chapter XI](#chapter-xi) \
+    11.1. [Exercise 07 - Deadlock](#exercise-07-deadlock)
+      
+
 ## Chapter I
 ## Preamble
+
+![D08_01](misc/images/D08_01.png)
 
 The Penrose stairs or Penrose steps, also called the impossible staircase, is an impossible object created by Lionel Penrose and his son Roger Penrose. A variation of the Penrose Triangle, it is a two-dimensional representation of a staircase in which the stairs make four 90-degree turns as they ascend or descend, yet form a continuous loop so that a person could climb them forever and never get higher. This is clearly impossible in three dimensions. The "continuous staircase" was first presented in an article written by the Penroses in 1959, based on the so-called "Penrose Triangle" published by Roger Penrose in the British Journal of Psychology in 1958. 
 
@@ -17,6 +45,16 @@ The Penrose stairs or Penrose steps, also called the impossible staircase, is an
 
 Therefore, there are different isolation levels in ANSI SQL standard that prevent known anomalies.
 
+![D08_02](misc/images/D08_02.png)
+
+From one point of view, this matrix should be a standard for any Relational Database, but reality... looks a bit different.
+
+|  |  | |
+| ------ | ------ | ------ |
+| PostgreSQL | ![D08_03](misc/images/D08_03.png) |
+| Oracle | ![D08_04](misc/images/D08_04.png) |
+| MySQL | ![D08_05](misc/images/D08_05.png) |
+
 Nowadays, IT community found a set of new anomalies based on Database Model (logical view):
 - Read Skew Anomaly;
 - Write Skew Anomaly;
@@ -25,6 +63,7 @@ Nowadays, IT community found a set of new anomalies based on Database Model (log
 - Chasm Traps Anomaly;
 - Data Model Loops Anomaly;
 - etc.
+
 
 ## Chapter II
 ## General Rules
@@ -45,8 +84,12 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 ## Rules of the day
 
 - Please make sure you have your own database and access to it on your PostgreSQL cluster. 
+- Please download a [script](materials/model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). **Our knowledge way is incremental and linear therefore please be aware all changes that you made in Day03 during Exercises 07-13 and in Day04 during Exercise 07 should be on place (its similar like in real world, when we applied a release and need to be consistency with data for new changes).**
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at the section before you start.
 - Please take a look at the Logical View of our Database Model. 
+
+![schema](misc/images/schema.png)
+
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
 - field id - primary key
