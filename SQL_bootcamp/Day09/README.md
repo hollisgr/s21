@@ -4,38 +4,8 @@
 
 Resume: Today you will see how to create and use functional blocks in Databases.
 
-## Contents
-
-1. [Chapter I](#chapter-i) \
-    1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-    2.1. [General Rules](#general-rules)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Rules of the day](#rules-of-the-day)  
-4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 - Audit of incoming inserts](#exercise-00-audit-of-incoming-inserts)  
-5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 - Audit of incoming updates](#exercise-01-audit-of-incoming-updates)  
-6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 - Audit of incoming deletes](#exercise-02-audit-of-incoming-deletes)  
-7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 - Generic Audit](#exercise-03-generic-audit)  
-8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 - Database View VS Database Function](#exercise-04-database-view-vs-database-function)
-9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 - Parameterized Database Function](#exercise-05-parameterized-database-function)
-10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 - Function like a function-wrapper](#exercise-06-function-like-a-function-wrapper)
-11. [Chapter XI](#chapter-xi) \
-    11.1. [Exercise 07 - Different view to find a Minimum](#exercise-07-different-view-to-find-a-minimum)
-12. [Chapter XII](#chapter-xii) \
-    12.1. [Exercise 08 - Fibonacci algorithm is in a function](#exercise-08-fibonacci-algorithm-is-in-a-function)    
-      
-
 ## Chapter I
 ## Preamble
-
-![D09_01](misc/images/D09_01.png)
 
 There are many functional programming languages in the RDBMS world. We can mainly talk about a "one-to-one" dependency between a particular RDBMS engine and the functional language inside it. Please take a look at a sample of these languages:
 - T-SQL,
@@ -48,15 +18,6 @@ There are many functional programming languages in the RDBMS world. We can mainl
 
 Actually, there are two opposing opinions in the IT world about where business logic should be located. The first opinion is on Application Level, the second one is in RDBMS directly based on set UDF (User Defined Functions / Procedures / Packages). 
 Everyone chooses their own way to implement business logic. From our point of view, business logic should be in both places and we can tell you why.  
-Please take a look at the 2 simple architectures below. 
-
-|  |  |
-| ------ | ------ |
-| ![D09_02](misc/images/D09_02.png) | Everything is clear, frontends and backends work through a special REST API layer that implements all the business logic. It's a really ideal application world. |
-| But there are always some privileged people / applications (like IDE) that work directly with our databases and... our pattern can be broken. | ![D09_03](misc/images/D09_03.png) |
-
-Just think about it and try to create a clean architecture :-)
-
 
 ## Chapter II
 ## General Rules
@@ -77,12 +38,8 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 ## Rules of the day
 
 - Please make sure you have your own database and access to it on your PostgreSQL cluster. 
-- Please download a [script](materials/model.sql) with Database Model here and apply the script to your database (you can use command line with psql or just run it through any IDE, for example DataGrip from JetBrains or pgAdmin from PostgreSQL community). **Our knowledge way is incremental and linear therefore please be aware all changes that you made in Day03 during Exercises 07-13 and in Day04 during Exercise 07 should be on place (its similar like in real world, when we applied a release and need to be consistency with data for new changes).**
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at the section before you start.
 - Please take a look at the Logical View of our Database Model. 
-
-![schema](misc/images/schema.png)
-
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
 - field id - primary key
