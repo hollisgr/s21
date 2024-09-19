@@ -4,6 +4,8 @@ Implementation of the string.h library with additions.
 
 This project is implementation of the string.h library in the C programming language with some additions (sprintf and sscanf functions). The string.h library is the main C library for string handling. As part of the project, I worked on tasks involving string data and consolidate the structured approach.
 
+- Authors: hollisgr, thucydil, floreand.
+
 ### string.h Functions
 
 | No. | Function | Description |
