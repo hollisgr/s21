@@ -2,47 +2,11 @@
 
 Implementation of the matrix_cpp library.
 
-## Chapter I
-
-![s21_matrix](misc/images/s21_matrix.png)
-
-Planet Earth, 20 September 2000.
-
-*"Our CEO has such a wonderful country house! It has everything to make ideas come true. A veranda overlooking a huge swimming pool on the lawn completes the picture of a passionate and intelligent person."*
-
-*"Yes, I agree! I'm so glad we were invited here. To tell you the truth, I feel a bit déjà vu, like I've seen this place before."*
-
-*"Oh, that's weird. Believe me, you won't find a house like this anywhere else in the country!* \
-*So, what were we talking about? Oh, right! For several days now, in this vibrant place, id Software's main technical team has been discussing a new technology we want to introduce in our upcoming game Doom 3. And what creates the most sense of reality in an image? The play of light and shadow, of course, which currently takes too long to compute and puts a strain on the CPU.
-John is known for his technological and algorithmic ideas and tricks that have led to crazy breakthroughs in speed and code optimisation."*
-
-*"Yeah, feels like I've heard that one before."*
-
-*"Really? I guess Catharina got to you first.* \
-*Anyway, on to the interesting part. John Carmack, our Chief Technology Officer and the founder of the company, presented a theoretical development that would allow shadows to be cast on a scene after it has gone through the entire graphics pipeline, using a depth buffer and a stencil buffer."*
-
-*"Oh, that's really... fascinating."*
-
-*"We invited you to this party for a reason. The whole team is working on a new way of creating shadows in a scene, and your department in particular has been asked by John to implement a very fast and optimised library of all sorts of matrix transformations on which the entire mathematical logic of the algorithm will be based. Vectors and matrices, transpose and SRT conversions, and many other mathematical objects and operations used in computer graphics.*
-*For a correct and considered transition to the new method, we need a significant and impressive performance change, and you will be responsible for it! Please remember that all the work must be done in a modern OOP style to achieve maximum code quality!"*
-
-*"Well, I would be… um… happy to help you."*
-
-*"Perfect! Who knows, maybe..."*
-
 ## Introduction
 
-In this project, you will implement the matrix library that you already know from the **s21_matrix** project, but this time you will be using the object-oriented approach (see materials). The object-oriented approach allows to implement a library for matrices as a separate class whose objects have defined operations, that can be represented both as methods and as standard operators +, -, *, etc.
-
-
-## Chapter II
+In this project, i implement the matrix library that i already know from the **matrix** project, but this time i used the object-oriented approach. The object-oriented approach allows to implement a library for matrices as a separate class whose objects have defined operations, that is represented both as methods and as standard operators +, -, *, etc.
 
 ## Information
-
-### C++ and C
-
-C++ is a programming language based on the C language for implementing programs using an object-oriented approach. This means that the C++ syntax rules are derived directly from C, so most C code can be copied into C++ programs and successfully compiled.
-For the most part, C++ only adds or modifies capabilities for the programmer, rather than taking away anything, so it's easier to talk about the differences (see Resources) than the similarities when it comes to C++.
 
 ### An example of a matrix class in C++
 ```cpp
@@ -103,7 +67,7 @@ Note that some operations have exceptional situations that require special handl
 | `double Determinant()` | Calculates and returns the determinant of the current matrix. | The matrix is not square. |
 | `S21Matrix InverseMatrix()` | Calculates and returns the inverse matrix. | Matrix determinant is 0. |
 
-Apart from those operations, you also need to implement constructors and destructors:
+- implemented constructors and destructors:
 
 | Method | Description |
 | ----------- | ----------- |
@@ -113,7 +77,7 @@ Apart from those operations, you also need to implement constructors and destruc
 | `S21Matrix(S21Matrix&& other)` | Move constructor. |
 | `~S21Matrix()` | Destructor. |
 
-And you also need to overload the following operators, partly corresponding to the operations above:
+- overloaded operators:
 
 | Operator | Description | Exceptional situations |
 | ----------- | ----------- | ----------- |
@@ -127,20 +91,12 @@ And you also need to overload the following operators, partly corresponding to t
 | `*=`  | Multiplication assignment (`MulMatrix`/`MulNumber`). | The number of columns of the first matrix does not equal the number of rows of the second matrix. |
 | `(int i, int j)`  | Indexation by matrix elements (row, column). | Index is outside the matrix. |
 
+## Implementation of the matrix_cpp library functions:
 
-## Chapter III
-
-## Part 1. Implementation of the s21_matrix_oop.h library functions
-
-- The program must be developed in C++ language of C++17 standard using gcc compiler;
-- The program code must be located in the src folder;
-- When writing code it is necessary to follow the Google style;
-- Implement the matrix as an `S21Matrix` class;
-- Use only the `matrix_`, `rows_` and `cols_` fields as private;
-- Implement the access to private fields `rows_` and `cols_` via accessor and mutator. If the matrix increases in size, it is filled with zeros. If it decreases in size, the excess is simply discarded;
-- Make it as a static library (with s21_matrix_oop.h header file);
-- Implement the operations described [above](#matrix-operations);
-- Overload the operators according to the table in the chapter [above](#matrix-operations);
-- Prepare full coverage of library functions code with unit-tests using the GTest library;
-- Provide a Makefile for building the library and tests (with targets all, clean, test, s21_matrix_oop.a).
+- The program is developed in C++ language of C++17 standard using gcc compiler;
+- Implemented matrix is an `S21Matrix` class;
+- The `matrix_`, `rows_` and `cols_` fields are private;
+- Implemented the access to private fields `rows_` and `cols_` via accessor and mutator. If the matrix increases in size, it is filled with zeros. If it decreases in size, the excess is simply discarded;
+- Full coverage of library functions code with unit-tests using the GTest library;
+- Makefile for building the library and tests (with targets all, clean, test, s21_matrix_oop.a, report).
 
