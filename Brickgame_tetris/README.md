@@ -4,7 +4,7 @@ My interpretation of classical puzzle video game. In this video game the goal is
 
 - Author: hollisgr
 
-![pic](image/tetris1.png)
+![pic](src/image/tetris1.png)
 
 ## Information
 - Developed for Linux;
