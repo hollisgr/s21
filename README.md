@@ -1,6 +1,6 @@
 # There is my s21 projects
 
-
+![s21_logo](logos/school21.png)
 
 - String (C) - Implementation of the string.h library with additions;
 
