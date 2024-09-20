@@ -70,13 +70,5 @@ Suite *test_transpose(void) {
   tcase_add_test(tc, transpose_1);
   tcase_add_test(tc, transpose_2);
   tcase_add_test(tc, transpose_3);
-  // tcase_add_test(tc, transpose_4);
-  // tcase_add_test(tc, transpose_5);
-  // tcase_add_test(tc, transpose_6);
-  // tcase_add_test(tc, transpose_7);
-  // tcase_add_test(tc, transpose_8);
-  // tcase_add_test(tc, transpose_9);
-  // tcase_add_test(tc, transpose_10);
-  // tcase_add_test(tc, transpose_11);
   return s;
 }

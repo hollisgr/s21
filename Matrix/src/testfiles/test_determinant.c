@@ -95,11 +95,5 @@ Suite *test_determinant(void) {
   tcase_add_test(tc, determinant_3);
   tcase_add_test(tc, determinant_4);
   tcase_add_test(tc, determinant_5);
-  // tcase_add_test(tc, determinant_6);
-  // tcase_add_test(tc, determinant_7);
-  // tcase_add_test(tc, determinant_8);
-  // tcase_add_test(tc, determinant_9);
-  // tcase_add_test(tc, determinant_10);
-  // tcase_add_test(tc, determinant_11);
   return s;
 }

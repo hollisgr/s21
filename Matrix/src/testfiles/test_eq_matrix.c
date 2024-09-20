@@ -100,10 +100,5 @@ Suite *test_eq_matrix(void) {
   tcase_add_test(tc, eq_matrix_4);
   tcase_add_test(tc, eq_matrix_5);
   tcase_add_test(tc, eq_matrix_6);
-  // tcase_add_test(tc, eq_matrix_7);
-  // tcase_add_test(tc, eq_matrix_8);
-  // tcase_add_test(tc, eq_matrix_9);
-  // tcase_add_test(tc, eq_matrix_10);
-  // tcase_add_test(tc, eq_matrix_11);
   return s;
 }

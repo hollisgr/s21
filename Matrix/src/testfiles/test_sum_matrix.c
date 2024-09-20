@@ -133,10 +133,5 @@ Suite *test_sum_matrix(void) {
   tcase_add_test(tc, sum_matrix_4);
   tcase_add_test(tc, sum_matrix_5);
   tcase_add_test(tc, sum_matrix_6);
-  // tcase_add_test(tc, sum_matrix_7);
-  // tcase_add_test(tc, sum_matrix_8);
-  // tcase_add_test(tc, sum_matrix_9);
-  // tcase_add_test(tc, sum_matrix_10);
-  // tcase_add_test(tc, sum_matrix_11);
   return s;
 }

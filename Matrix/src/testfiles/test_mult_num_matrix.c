@@ -6,7 +6,6 @@ START_TEST(mult_num_1) {
   double number = 1;
   int return_value, rows = 2, cols = 2;
   s21_create_matrix(rows, cols, &matrix1);
-  // s21_create_matrix(rows, cols, &matrix_result);
   return_value = s21_mult_number(&matrix1, number, &matrix_result);
   ck_assert_int_eq(return_value, 0);
   for (int i = 0; i < rows; i++) {
@@ -25,7 +24,6 @@ START_TEST(mult_num_2) {
   double number = 2;
   int return_value, rows = 3, cols = 3;
   s21_create_matrix(rows, cols, &matrix1);
-  // s21_create_matrix(rows, cols, &matrix_result);
   s21_create_matrix(rows, cols, &matrix_test);
   // matrix1
   matrix1.matrix[0][0] = 1;
@@ -67,7 +65,6 @@ START_TEST(mult_num_3) {
   double number = 0;
   int return_value, rows = 3, cols = 3;
   s21_create_matrix(rows, cols, &matrix1);
-  // s21_create_matrix(rows, cols, &matrix_result);
   s21_create_matrix(rows, cols, &matrix_test);
   // matrix1
   matrix1.matrix[0][0] = 1;
@@ -108,11 +105,9 @@ START_TEST(mult_num_4) {
   double number = 1;
   int return_value, rows = 2, cols = 2;
   s21_create_matrix(rows, cols, &matrix1);
-  // s21_create_matrix(rows, cols, &matrix_result);
   s21_remove_matrix(&matrix1);
   return_value = s21_mult_number(&matrix1, number, &matrix_result);
   ck_assert_int_eq(return_value, 1);
-  // s21_remove_matrix(&matrix_result);
 }
 END_TEST
 
@@ -125,12 +120,5 @@ Suite *test_mult_num(void) {
   tcase_add_test(tc, mult_num_2);
   tcase_add_test(tc, mult_num_3);
   tcase_add_test(tc, mult_num_4);
-  // tcase_add_test(tc, mult_num_5);
-  // tcase_add_test(tc, mult_num_6);
-  // tcase_add_test(tc, mult_num_7);
-  // tcase_add_test(tc, mult_num_8);
-  // tcase_add_test(tc, mult_num_9);
-  // tcase_add_test(tc, mult_num_10);
-  // tcase_add_test(tc, mult_num_11);
   return s;
 }

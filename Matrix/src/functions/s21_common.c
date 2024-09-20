@@ -28,21 +28,3 @@ void s21_record_determinant(matrix_t *determinant, matrix_t *A, int minor_row,
     }
   }
 }
-
-// int s21_zero_matrix(matrix_t *result) {
-//   if (!result || s21_validation_matrix(result) == FAILURE)
-//     return S21_INCORRECT_MATRIX;
-//   else
-//     for (int i = 0; i < result->rows; i++) {
-//       for (int j = 0; j < result->columns; j++) result->matrix[i][j] = 0;
-//     }
-//   return S21_RETURN_OK;
-// }
-
-// void s21_print_matrix(matrix_t *matrix) {
-//   for (int i = 0; i < matrix->rows; i++) {
-//     for (int j = 0; j < matrix->columns; j++)
-//       printf("%lf ", matrix->matrix[i][j]);
-//     printf("\n");
-//   }
-// }

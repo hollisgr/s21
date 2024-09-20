@@ -119,11 +119,5 @@ Suite *test_calc_complements(void) {
   tcase_add_test(tc, calc_complements_3);
   tcase_add_test(tc, calc_complements_4);
   tcase_add_test(tc, calc_complements_5);
-  // tcase_add_test(tc, calc_complements_6);
-  // tcase_add_test(tc, calc_complements_7);
-  // tcase_add_test(tc, calc_complements_8);
-  // tcase_add_test(tc, calc_complements_9);
-  // tcase_add_test(tc, calc_complements_10);
-  // tcase_add_test(tc, calc_complements_11);
   return s;
 }

@@ -22,10 +22,7 @@ typedef enum s21_return {
 } s21_return;
 
 // common functions
-int s21_is_correct_create_values(int rows, int columns, matrix_t *result);
 int s21_validation_matrix(matrix_t *matrix);
-int s21_zero_matrix(matrix_t *matrix);
-void s21_print_matrix(matrix_t *matrix);
 void s21_record_determinant(matrix_t *determinant, matrix_t *A, int minor_row,
                             int minor_col);
 void s21_algebraic_complements(matrix_t *A, matrix_t *result);

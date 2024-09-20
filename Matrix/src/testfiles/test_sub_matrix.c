@@ -139,10 +139,5 @@ Suite *test_sub_matrix(void) {
   tcase_add_test(tc, sub_matrix_4);
   tcase_add_test(tc, sub_matrix_5);
   tcase_add_test(tc, sub_matrix_6);
-  // tcase_add_test(tc, sub_matrix_7);
-  // tcase_add_test(tc, sub_matrix_8);
-  // tcase_add_test(tc, sub_matrix_9);
-  // tcase_add_test(tc, sub_matrix_10);
-  // tcase_add_test(tc, sub_matrix_11);
   return s;
 }

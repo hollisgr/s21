@@ -75,7 +75,6 @@ START_TEST(inverse_matrix_4) {
   ck_assert_int_eq(return_value, 2);
   s21_remove_matrix(&matrix1);
   s21_remove_matrix(&matrix2);
-  // s21_remove_matrix(&matrix_result);
 }
 END_TEST
 
@@ -90,7 +89,6 @@ START_TEST(inverse_matrix_5) {
   ck_assert_int_eq(return_value, 2);
   s21_remove_matrix(&matrix1);
   s21_remove_matrix(&matrix2);
-  // s21_remove_matrix(&matrix_result);
 }
 END_TEST
 
@@ -112,7 +110,6 @@ START_TEST(inverse_matrix_6) {
   return_value = s21_inverse_matrix(&matrix1, &matrix_result);
   ck_assert_int_eq(return_value, 2);
   s21_remove_matrix(&matrix1);
-  // s21_remove_matrix(&matrix_result);
 }
 END_TEST
 
@@ -127,10 +124,5 @@ Suite *test_inverse_matrix(void) {
   tcase_add_test(tc, inverse_matrix_4);
   tcase_add_test(tc, inverse_matrix_5);
   tcase_add_test(tc, inverse_matrix_6);
-  // tcase_add_test(tc, inverse_matrix_7);
-  // tcase_add_test(tc, inverse_matrix_8);
-  // tcase_add_test(tc, inverse_matrix_9);
-  // tcase_add_test(tc, inverse_matrix_10);
-  // tcase_add_test(tc, inverse_matrix_11);
   return s;
 }

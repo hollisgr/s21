@@ -14,7 +14,6 @@ START_TEST(matrix_2) {
   int return_value, rows = 0, cols = 0;
   return_value = s21_create_matrix(rows, cols, &matrix1);
   ck_assert_int_eq(return_value, 1);
-  // s21_remove_matrix(&matrix1);
 }
 END_TEST
 
@@ -23,7 +22,6 @@ START_TEST(matrix_3) {
   int return_value, rows = 1, cols = 0;
   return_value = s21_create_matrix(rows, cols, &matrix1);
   ck_assert_int_eq(return_value, 1);
-  // s21_remove_matrix(&matrix1);
 }
 END_TEST
 
@@ -32,7 +30,6 @@ START_TEST(matrix_4) {
   int return_value, rows = 0, cols = 1;
   return_value = s21_create_matrix(rows, cols, &matrix1);
   ck_assert_int_eq(return_value, 1);
-  // s21_remove_matrix(&matrix1);
 }
 END_TEST
 
@@ -41,7 +38,6 @@ START_TEST(matrix_5) {
   int return_value, rows = -1, cols = -1;
   return_value = s21_create_matrix(rows, cols, &matrix1);
   ck_assert_int_eq(return_value, 1);
-  // s21_remove_matrix(&matrix1);
 }
 END_TEST
 
@@ -50,7 +46,6 @@ START_TEST(matrix_6) {
   int return_value, rows = -1, cols = 0;
   return_value = s21_create_matrix(rows, cols, &matrix1);
   ck_assert_int_eq(return_value, 1);
-  // s21_remove_matrix(&matrix1);
 }
 END_TEST
 
@@ -102,7 +97,5 @@ Suite *test_matrix(void) {
   tcase_add_test(tc, matrix_7);
   tcase_add_test(tc, matrix_8);
   tcase_add_test(tc, matrix_9);
-  // tcase_add_test(tc, matrix_10);
-  // tcase_add_test(tc, matrix_11);
   return s;
 }
