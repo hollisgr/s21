@@ -80,7 +80,6 @@ START_TEST(arithmetic_div_8) {
   s21_decimal result = {{0, 0, 0, 0}};
   s21_decimal result2 = {{1, 0, 0, 0}};
   s21_set_scale(&value1, 2);
-  // s21_set_scale(&result2, 2);
   s21_div(value1, value2, &result);
   for (int i = 0; i < 4; i++) ck_assert_int_eq(result.bits[i], result2.bits[i]);
 }

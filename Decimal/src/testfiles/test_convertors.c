@@ -30,14 +30,6 @@ START_TEST(convertors_3) {
 }
 END_TEST
 
-// START_TEST(convertors_4) {
-//   s21_decimal value1 = {{0, 0, 0, 0}};
-//   int value2;
-//   int x = s21_from_int_to_decimal(value2, &value1);
-//   ck_assert_int_eq(x, 1);
-// }
-// END_TEST
-
 //-----S21_FROM_FLOAT_TO_DECIMAL-----
 //---------------------------------
 
@@ -70,14 +62,6 @@ START_TEST(convertors_7) {
   for (int i = 0; i < 4; i++) ck_assert_int_eq(result.bits[i], value1.bits[i]);
 }
 END_TEST
-
-// START_TEST(convertors_8) {
-//   s21_decimal value1 = {{0, 0, 0, 0}};
-//   float value2;
-//   int x = s21_from_float_to_decimal(value2, &value1);
-//   ck_assert_int_eq(x, 1);
-// }
-// END_TEST
 
 //-----S21_FROM_DECIMAL_TO_INT-----
 //---------------------------------
@@ -223,11 +207,9 @@ Suite *test_convertors(void) {
   tcase_add_test(tc, convertors_1);
   tcase_add_test(tc, convertors_2);
   tcase_add_test(tc, convertors_3);
-  // tcase_add_test(tc, convertors_4);
   tcase_add_test(tc, convertors_5);
   tcase_add_test(tc, convertors_6);
   tcase_add_test(tc, convertors_7);
-  // tcase_add_test(tc, convertors_8);
   tcase_add_test(tc, convertors_9);
   tcase_add_test(tc, convertors_10);
   tcase_add_test(tc, convertors_11);

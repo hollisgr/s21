@@ -1,34 +1,5 @@
 #include "s21_decimal.h"
 
-// void s21_print_binary(int n) {
-//   int count = 1;
-//   for (int i = 31; i >= 0; i--) {
-//     printf("%d", (n >> i) & 1);
-//     count++;
-//   }
-//   printf(" ");
-// }
-
-// void s21_print_decimal(s21_decimal n) {
-//   for (int i = 3; i >= 0; i--) {
-//     s21_print_binary(n.bits[i]);
-//   }
-//   printf("\n");
-// }
-
-// void s21_print_big_decimal(s21_big_decimal n) {
-//   for (int i = 7; i >= 0; i--) {
-//     s21_print_binary(n.bits[i]);
-//   }
-//   printf("\n");
-// }
-
-// void s21_right_shift(s21_decimal *value) {
-//   for (int i = 0; i < 3; i++) {
-//     value->bits[i] /= 2;
-//   }
-// }
-
 void s21_convert_to_big_decimal(s21_decimal value_1, s21_big_decimal *value_2) {
   s21_zero_big_decimal(value_2);
   value_2->bits[0] = value_1.bits[0];
@@ -107,22 +78,6 @@ int s21_is_big_zero(s21_big_decimal value) {
   }
   return error;
 }
-
-// int s21_is_can_div_ten(s21_decimal value) {
-//   int error = 0;
-//   s21_big_decimal res = {0};
-//   s21_big_decimal big_value = {0};
-//   s21_big_decimal not_result = {0};
-//   s21_big_decimal ten = {{10, 0, 0, 0, 0, 0, 0, 0}};
-
-//   s21_convert_to_big_decimal(value, &big_value);
-
-//   res = s21_big_div(big_value, ten, &not_result);
-
-//   if (s21_is_big_zero(res)) error = 1;
-
-//   return error;
-// }
 
 int s21_is_can_big_div_ten(s21_big_decimal value) {
   int error = 0;

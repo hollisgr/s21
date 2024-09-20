@@ -72,20 +72,6 @@ void s21_big_add(s21_big_decimal value_1, s21_big_decimal value_2,
   }
 }
 
-// void s21_big_add(s21_big_decimal value_1, s21_big_decimal value_2,
-//                  s21_big_decimal *result) {
-//   int result_bit = 0;
-//   int mem = 0;
-//   int mantissa_size = (sizeof(s21_big_decimal) / sizeof(int)) * 32;
-//   for (int i = 0; i < mantissa_size; i++) {
-//     result_bit =
-//         s21_big_get_bit(value_1, i) + s21_big_get_bit(value_2, i) + mem;
-//     mem = result_bit / 2;
-//     result_bit %= 2;
-//     s21_big_set_bit(result, i, result_bit);
-//   }
-// }
-
 int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result) {
   s21_arithmethic_return error = S21_ARITHMETHIC_OK;
 

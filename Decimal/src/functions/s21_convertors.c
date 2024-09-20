@@ -11,62 +11,6 @@ int s21_from_int_to_decimal(int src, s21_decimal *dst) {
   return code;
 }
 
-// int s21_mantissa_range(float src) {
-//   int range = 0, mant = 0;
-//   mant = (int)src;
-//   for (int i = 0; i < 9; i++) {
-//     if (mant > 0) {
-//       mant = mant / 10;
-//       range++;
-//     }
-//   }
-//   return range;
-// }
-
-// int s21_from_float_to_decimal(float src, s21_decimal *dst) {
-//   int code = 0, mant = 0, scale = 0, fract_scale = 0, range = 0, sign = 0;
-//   float fract = 0;
-//   if (src < 0) {
-//     src = src * -1;
-//     sign = 1;
-//   }
-//   range = s21_mantissa_range(src);
-//   if (range > 8) return code = 1;
-//   if (range == 7 || range == 8) {
-//     mant = (int)src;
-//     dst->bits[0] = mant;
-//   }
-//   else {
-//     scale = 7 - range;
-//     fract = src - (int)src;
-//     fract = fract * 10;
-//     for (int i = 0; i < scale; i++) {
-//       if ((int)fract != 0) {
-//         src = src * 10;
-//         fract = src - (int)src;
-//         fract = fract * 10;
-//         fract_scale++;
-//       }
-//     }
-//     // fract = src - mant;
-//     // fract = fract * 10;
-//     // scale = 7 - range;
-//     // for (int i = 0; i < scale; i++) {
-//     //   if (fract != 0) {
-//     //     mant = (mant * 10) + fract;
-//     //     fract = fract - (int)fract;
-//     //     fract = fract * 10;
-//     //     fract_scale++;
-//     //   }
-//     // }
-//     mant = (int)src;
-//     dst->bits[0] = mant;
-//     s21_set_scale(dst, fract_scale);
-//   }
-//   if (sign) s21_set_sign(dst, 1);
-//   return code;
-// }
-
 int s21_from_float_to_decimal(float src, s21_decimal *dst) {
   int code = 0, f_exp = 0, f_mant = 0, abs_f_exp = 0;
   s21_zero_decimal(dst);

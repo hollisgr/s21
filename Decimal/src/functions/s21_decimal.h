@@ -51,7 +51,6 @@ int s21_comparison(s21_decimal value_1,
                    s21_decimal value_2); /*return 0 if value_1 and value_2 is
                                       equal, return 1 if value_1 is greater than
                                       value_2, return -1 if value_1 is less */
-// void s21_right_shift(s21_decimal *value);
 void s21_print_binary(int n);
 void s21_print_decimal(s21_decimal n);
 int s21_get_exp_from_float(char *string);
@@ -120,10 +119,6 @@ int s21_is_can_big_div_ten(s21_big_decimal value);
 void s21_scale_big_div_ten(s21_big_decimal *value);
 
 // setters/getters
-int s21_big_get_sign(s21_big_decimal value);
-void s21_big_set_sign(s21_big_decimal *value, int sign_value);
-int s21_big_get_scale(s21_big_decimal value);
-void s21_big_set_scale(s21_big_decimal *value, int scale_value);
 int s21_big_get_bit(s21_big_decimal value, int index);
 void s21_big_set_bit(s21_big_decimal *value, int index, int bit_value);
 // ------------
@@ -134,8 +129,6 @@ void s21_big_sub(s21_big_decimal value_1, s21_big_decimal value_2,
                  s21_big_decimal *result);
 void s21_big_mul(s21_big_decimal value_1, s21_big_decimal value_2,
                  s21_big_decimal *result);
-// void s21_big_div(s21_big_decimal value_1, s21_big_decimal value_2,
-// s21_big_decimal *result);
 s21_big_decimal s21_big_div(s21_big_decimal value_1, s21_big_decimal value_2,
                             s21_big_decimal *result);
 void s21_scale_div_ten(s21_decimal *value);

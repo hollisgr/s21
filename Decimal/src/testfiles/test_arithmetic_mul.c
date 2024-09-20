@@ -13,17 +13,6 @@ START_TEST(arithmetic_mul_1) {
 }
 END_TEST
 
-// START_TEST(arithmetic_mul_1) {
-//   s21_decimal value1 = {{1, 1, 1, MASK_NEGATIVE}};
-//   s21_decimal value2 = {{2, 0, 0, 0}};
-//   s21_decimal result = {{0, 0, 0, 0}};
-//   s21_decimal result2 = {{2, 2, 2, MASK_NEGATIVE}};
-//   s21_mul(value1, value2, &result);
-//   for (int i = 0; i < 4; i++) ck_assert_int_eq(result.bits[i],
-//   result2.bits[i]);
-// }
-// END_TEST
-
 START_TEST(arithmetic_mul_2) {
   s21_decimal value1 = {{1, 1, 1, MASK_NEGATIVE}};
   s21_decimal value2 = {{2, 0, 0, 0}};
@@ -88,25 +77,6 @@ START_TEST(arithmetic_mul_6) {
     ck_assert_int_eq(big_result.bits[i], big_result2.bits[i]);
 }
 END_TEST
-
-// START_TEST(arithmetic_mul_6) {
-//   s21_decimal value1 = {{1, 1, 1, 0}};
-//   s21_decimal value2 = {{2, 0, 0, 0}};
-//   s21_decimal result = {{0, 0, 0, 0}};
-//   s21_decimal result2 = {{2, 2, 2, 0}};
-//   s21_big_decimal big_value1 = {0};
-//   s21_big_decimal big_value2 = {0};
-//   s21_big_decimal big_result = {0};
-//   s21_big_decimal big_result2 = {0};
-//   s21_convert_to_big_decimal(value1, &big_value1);
-//   s21_convert_to_big_decimal(value2, &big_value2);
-//   s21_convert_to_big_decimal(result, &big_result);
-//   s21_convert_to_big_decimal(result2, &big_result2);
-//   s21_big_mul(big_value1, big_value2, &big_result);
-//   for (int i = 0; i < 8; i++) ck_assert_int_eq(big_result.bits[i],
-//   big_result2.bits[i]);
-// }
-// END_TEST
 
 START_TEST(arithmetic_mul_7) {
   s21_decimal value1 = {{1, 1, 1, 0}};
