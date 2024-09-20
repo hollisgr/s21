@@ -128,18 +128,6 @@ TEST(operationsTest, sum_matrix5) {
   ASSERT_EQ(test3.EqMatrix(result), true);
 }
 
-// TEST(operationsTest, sum_matrix5) {
-//     S21Matrix test1(2, 2);
-//     S21Matrix test2(2, 2);
-//     S21Matrix test3(2, 2);
-//     S21Matrix result(2, 2);
-//     test1.setValue(1, 1, 1);
-//     test2.setValue(1, 1, 1);
-//     result.setValue(1, 1, 3);
-//     test3 = test1 + test2;
-//     ASSERT_EQ(test3.EqMatrix(result), 0);
-// }
-
 TEST(operationsTest, sub_matrix1) {
   S21Matrix test1(2, 2);
   S21Matrix test2(2, 2);
@@ -620,72 +608,6 @@ TEST(operationsTest, inverseMatrix5) {
   S21Matrix test2 = test1.InverseMatrix();
   ASSERT_EQ(result.EqMatrix(test2), true);
 }
-
-// TEST(operationsTest, transpose1) {
-//     S21Matrix test1(2, 3);
-//     S21Matrix test2 = test1.Transpose();
-//     S21Matrix result(3, 2);
-//     result.setValue(1, 1, 1);
-//     ASSERT_EQ(result.EqMatrix(test2), 0);
-// }
-
-// TEST(operationsTest, transpose2) {
-//     S21Matrix test1(3, 2);
-//     S21Matrix result(2, 3);
-//     double matrix1[3][2];
-//     double matrix2[2][3];
-//     // matrix1
-//     matrix1[0][0] = 1;
-//     matrix1[0][1] = 4;
-//     matrix1[1][0] = 2;
-//     matrix1[1][1] = 5;
-//     matrix1[2][0] = 3;
-//     matrix1[2][1] = 6;
-//     // matrix_test
-//     matrix2[0][0] = 1;
-//     matrix2[0][1] = 2;
-//     matrix2[0][2] = 3;
-//     matrix2[1][0] = 4;
-//     matrix2[1][1] = 5;
-//     matrix2[1][2] = 6;
-//     for (int i = 0; i < 3; i++)
-//         for (int j = 0; j < 2; j++)
-//             test1.setValue(i, j, matrix1[i][j]);
-//     for (int i = 0; i < 2; i++)
-//         for (int j = 0; j < 3; j++)
-//             result.setValue(i, j, matrix2[i][j]);
-//     S21Matrix test2 = test1.Transpose();
-//     ASSERT_EQ(result.EqMatrix(test2), 1);
-// }
-
-// TEST(operationsTest, transpose3) {
-//     S21Matrix test1(3, 2);
-//     S21Matrix result(2, 3);
-//     double matrix1[3][2];
-//     double matrix2[2][3];
-//     // matrix1
-//     matrix1[0][0] = 1;
-//     matrix1[0][1] = 4;
-//     matrix1[1][0] = 2;
-//     matrix1[1][1] = 5;
-//     matrix1[2][0] = 3;
-//     matrix1[2][1] = 7;
-//     // matrix_test
-//     matrix2[0][0] = 1;
-//     matrix2[0][1] = 2;
-//     matrix2[0][2] = 3;
-//     matrix2[1][0] = 4;
-//     matrix2[1][1] = 5;
-//     matrix2[1][2] = 6;
-//     for (int i = 0; i < 3; i++)
-//         for (int j = 0; j < 2; j++)
-//             test1.setValue(i, j, matrix1[i][j]);
-//     for (int i = 0; i < 2; i++)
-//         for (int j = 0; j < 3; j++)
-//             result.setValue(i, j, matrix2[i][j]);
-//     S21Matrix test2 = test1.Transpose();
-//     ASSERT_EQ(result.EqMatrix(test2), 0);
-// }
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

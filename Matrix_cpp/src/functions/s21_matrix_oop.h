@@ -45,7 +45,6 @@ class S21Matrix {
   void createMatrix(int rows, int cols);
   void copyMatrix(const S21Matrix& other);
   void deleteMatrix();
-  // void printMatrix();
 
   double getValue(int i, int j);
   void setValue(int i, int j, double num);

@@ -13,6 +13,7 @@ CLANG = clang-format -style=Google
 all: clean $(OBJECT)
 
 $(OBJECT): clean
+	mkdir ./lib
 	$(CC) $(CFLAGS) -c $(SOURCE)
 	ar r $(OBJECT) *.o
 	ranlib $(OBJECT)
@@ -27,7 +28,7 @@ test_valgrind: clean_test $(OBJECT)
 	$(VALGRIND) ./test
 
 clean: clean_report clean_test
-	rm -rf $(OBJECT) *.o main
+	rm -rf $(OBJECT) *.o main ./lib
 
 clean_test:
 	rm -rf test

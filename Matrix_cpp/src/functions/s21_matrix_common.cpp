@@ -35,14 +35,6 @@ void S21Matrix::copyMatrix(const S21Matrix& other) {
     for (int j = 0; j < cols_; j++) matrix_[i][j] = other.matrix_[i][j];
 }
 
-// void S21Matrix::printMatrix() {
-//     for (int i = 0; i < rows_; i++) {
-//         for (int j = 0; j < cols_; j++)
-//             std::cout << matrix_[i][j] << " ";
-//     std::cout << std::endl;
-//     }
-// }
-
 int S21Matrix::getRows() { return this->rows_; }
 
 int S21Matrix::getCols() { return this->cols_; }
