@@ -126,7 +126,6 @@ void game_loop(Game_state state) {
   figure_t next_figure;
   map_t map;
   game_stats_t stats;
-  // Game_state state = START;
   UserAction_t signal;
   init_game(&stats, &map, &figure, &next_figure);
   while (break_flag) {

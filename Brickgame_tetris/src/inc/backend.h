@@ -17,7 +17,7 @@
 void init_game(game_stats_t *stats, map_t *map, figure_t *figure,
                figure_t *next_figure);
 void init_colors();
-void game_loop();
+void game_loop(Game_state state);
 void init_stats(game_stats_t *stats);
 void read_max_score(game_stats_t *stats);
 void write_max_score(int score);

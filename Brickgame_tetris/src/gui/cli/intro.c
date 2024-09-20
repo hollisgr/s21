@@ -87,7 +87,6 @@ void print_intro_massage() {
 
   for (int i = 1; i < 20; i++)
     for (int j = 1; j < 40; j++) {
-      // PRINT_PROJECTION(i, j, PAIR_FIGURE_J);
       PRINT_PROJECTION(i, j, (color_1));
     }
 
@@ -97,15 +96,12 @@ void print_intro_massage() {
       int frame2 = to[i][j];
       int frame3 = tetris[i][j];
       if (frame1 == 1) {
-        // PRINT_CELL(i + 1, j + 4, PAIR_FIGURE_S);
         PRINT_CELL(i + 2, j + 4, color_2);
       }
       if (frame2 == 1) {
-        // PRINT_CELL(i + 7, j + 1, PAIR_FIGURE_Z);
         PRINT_CELL(i + 8, j + 1, color_3);
       }
       if (frame3 == 1) {
-        // PRINT_CELL(i + 13, j + 8, PAIR_FIGURE_T);
         PRINT_CELL(i + 14, j + 8, color_4);
       }
     }
